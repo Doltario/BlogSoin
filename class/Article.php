@@ -1,7 +1,7 @@
 <?php
-  // src/User.php
+  // src/Article.php
   /**
-   * @Entity @Table(name="users")
+   * @Entity @Table(name="articles")
    **/
   class Article{
     /** @Id @Column(type="integer") @GeneratedValue **/

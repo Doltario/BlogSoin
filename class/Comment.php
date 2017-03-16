@@ -1,7 +1,7 @@
 <?php
-  // src/User.php
+  // src/Comment.php
   /**
-   * @Entity @Table(name="users")
+   * @Entity @Table(name="comments")
    **/
   class Comment{
     /** @Id @Column(type="integer") @GeneratedValue **/
