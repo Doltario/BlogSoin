@@ -1,22 +1,15 @@
 <?php
-
-
-
-/**
- * User
- */
-class User
-{
-    /**
-     * @var integer
-     */
-    private $id;
-
-    /**
-     * @var string
-     */
-    private $name;
-
+  // src/User.php
+  /**
+   * @Entity @Table(name="users")
+   **/
+  class User{
+    /** @Id @Column(type="integer") @GeneratedValue **/
+      protected $id;
+    /** @Column(type="string", length=160, nullable=true) **/
+      protected $name;
+    /** @Column(type="string", length=160, nullable=true) **/
+      protected $password;
 
     /**
      * Get id
@@ -51,9 +44,6 @@ class User
     {
         return $this->name;
     }
-<<<<<<< HEAD
-=======
-
     /**
      * Set password
      *
@@ -77,5 +67,5 @@ class User
     {
         return $this->password;
     }
->>>>>>> 29fabf9bbbc53e58ce2e668d7350920902faa5cc
 }
+?>

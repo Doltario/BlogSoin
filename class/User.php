@@ -8,6 +8,12 @@
       protected $id;
     /** @Column(type="string", length=160, nullable=true) **/
       protected $name;
+    /** @Column(type="string", length=160, nullable=true) **/
+      protected $password;
+    /** @Column(type="string", length=160, nullable=true)**/
+      protected $mail;
+    /** @Column(type="boolean") **/
+      protected $is_admin;
 
   /**
    * Get id
@@ -33,14 +39,37 @@
       return $this;
   }
 
-  /**
-   * Get name
-   *
-   * @return string
-   */
-  public function getName()
-  {
-      return $this->name;
-  }
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    /**
+     * Set password
+     *
+     * @param string $password
+     *
+     * @return User
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
 }
 ?>
