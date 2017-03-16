@@ -1,22 +1,3 @@
-<?php
-
-
-
-/**
- * User
- */
-class User
-{
-    /**
-     * @var integer
-     */
-    private $id;
-
-    /**
-     * @var string
-     */
-    private $name;
-
 
     /**
      * Get id
@@ -51,8 +32,6 @@ class User
     {
         return $this->name;
     }
-<<<<<<< HEAD
-=======
 
     /**
      * Set password
@@ -77,5 +56,52 @@ class User
     {
         return $this->password;
     }
->>>>>>> 29fabf9bbbc53e58ce2e668d7350920902faa5cc
+
+    /**
+     * Set mail
+     *
+     * @param string $mail
+     *
+     * @return User
+     */
+    public function setMail($mail)
+    {
+        $this->mail = $mail;
+
+        return $this;
+    }
+
+    /**
+     * Get mail
+     *
+     * @return string
+     */
+    public function getMail()
+    {
+        return $this->mail;
+    }
+
+    /**
+     * Set isAdmin
+     *
+     * @param boolean $isAdmin
+     *
+     * @return User
+     */
+    public function setIsAdmin($isAdmin)
+    {
+        $this->is_admin = $isAdmin;
+
+        return $this;
+    }
+
+    /**
+     * Get isAdmin
+     *
+     * @return boolean
+     */
+    public function getIsAdmin()
+    {
+        return $this->is_admin;
+    }
 }
