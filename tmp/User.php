@@ -51,6 +51,8 @@ class User
     {
         return $this->name;
     }
+<<<<<<< HEAD
+=======
 
     /**
      * Set password
@@ -75,4 +77,5 @@ class User
     {
         return $this->password;
     }
+>>>>>>> 29fabf9bbbc53e58ce2e668d7350920902faa5cc
 }

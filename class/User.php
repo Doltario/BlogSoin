@@ -10,30 +10,34 @@
       protected $name;
     /** @Column(type="string", length=160, nullable=true) **/
       protected $password;
+    /** @Column(type="string", length=160, nullable=true)**/
+      protected $mail;
+    /** @Column(type="boolean") **/
+      protected $is_admin;
 
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+  /**
+   * Get id
+   *
+   * @return integer
+   */
+  public function getId()
+  {
+      return $this->id;
+  }
 
-    /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return User
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
+  /**
+   * Set name
+   *
+   * @param string $name
+   *
+   * @return User
+   */
+  public function setName($name)
+  {
+      $this->name = $name;
 
-        return $this;
-    }
+      return $this;
+  }
 
     /**
      * Get name
