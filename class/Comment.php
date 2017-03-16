@@ -3,7 +3,7 @@
   /**
    * @Entity @Table(name="users")
    **/
-  class User{
+  class Comment{
     /** @Id @Column(type="integer") @GeneratedValue **/
       protected $id;
     /** @Column(type="text", length=5000, nullable=true) **/

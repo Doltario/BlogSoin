@@ -3,7 +3,7 @@
   /**
    * @Entity @Table(name="users")
    **/
-  class User{
+  class Article{
     /** @Id @Column(type="integer") @GeneratedValue **/
       protected $id;
     /** @Column(type="string", length=50, nullable=true) **/
