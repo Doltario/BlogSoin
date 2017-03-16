@@ -52,4 +52,3 @@ class User
         return $this->name;
     }
 }
-
