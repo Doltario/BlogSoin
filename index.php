@@ -25,12 +25,12 @@
       <div class="">
         <h2>Pas encore membre ?</h2>
         <h3>Inscrivez vous des maintenant !</h3>
-        <form class="" action="" method="post">
+        <form class="" action="controller/create_user.php" method="post">
           <label for="">Email</label>
-          <input type="text" name="mail"><br>
+          <input type="text" name="email"><br>
 
-          <label for="pwd">Username</label>
-          <input type="password" name="username"><br>
+          <label for="username">Username</label>
+          <input type="text" name="username"><br>
 
           <label for="pwd">Password</label>
           <input type="password" name="pwd"><br>
