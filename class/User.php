@@ -14,6 +14,17 @@
       protected $mail;
     /** @Column(type="boolean") **/
       protected $is_admin;
+    /**
+        * @OneToOne(targetEntity="Article", inversedBy="user")
+        * @JoinColumn(name="article_id", referencedColumnName="id")
+    **/
+        protected $article;
+    /**
+        * @OneToOne(targetEntity="Comment", inversedBy="user")
+        * @JoinColumn(name="comment_id", referencedColumnName="id")
+    **/
+        protected $comment;
+
 
     /**
      * Get id
@@ -121,5 +132,52 @@
         return $this->is_admin;
     }
 
+
+    /**
+     * Set article
+     *
+     * @param \Article $article
+     *
+     * @return User
+     */
+    public function setArticle(\Article $article = null)
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    /**
+     * Get article
+     *
+     * @return \Article
+     */
+    public function getArticle()
+    {
+        return $this->article;
+    }
+
+    /**
+     * Set comment
+     *
+     * @param \Comment $comment
+     *
+     * @return User
+     */
+    public function setComment(\Comment $comment = null)
+    {
+        $this->comment = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Get comment
+     *
+     * @return \Comment
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
 }
-?>

@@ -10,7 +10,16 @@
       protected $content;
     /** @Column(type="datetime", length=50, nullable=true) **/
       protected $dateTime;
-
+    /**
+        * @OneToOne(targetEntity="Article", mappedBy="comment")
+        * @JoinColumn(name="article_id", referencedColumnName="id")
+    **/
+      protected $article;
+    /**
+        * @OneToOne(targetEntity="User", mappedBy="comment")
+        * @JoinColumn(name="user_id", referencedColumnName="id")
+    **/
+      protected $user;
   /**
    * Get id
    *
@@ -68,5 +77,52 @@
   {
       return $this->dateTime;
   }
+
+    /**
+     * Set article
+     *
+     * @param \Article $article
+     *
+     * @return Comment
+     */
+    public function setArticle(\Article $article = null)
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    /**
+     * Get article
+     *
+     * @return \Article
+     */
+    public function getArticle()
+    {
+        return $this->article;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \User $user
+     *
+     * @return Comment
+     */
+    public function setUser(\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }
-?>
