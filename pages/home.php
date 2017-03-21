@@ -15,7 +15,7 @@
         <nav>
           <ul>
             <li><a href="../controller/disconnect.php">Se déconnecter</a></li>
-            <li><a href="../controller/create_article.php">Ajouter un article</a></li>
+            <li><a href="../pages/new_article.php">Ajouter un article</a></li>
           </ul>
         </nav>
       </header>
