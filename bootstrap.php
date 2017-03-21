@@ -20,8 +20,8 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/class"), 
 $conn = array(
     'dbname' => 'BlogSoin',
     'user' => 'root',
-    'password' => 'ndvÉhgÉ-',
-    'host' => 'localhost',
+    'password' => 'root',
+    'host' => '127.0.0.1:8889',
     'driver' => 'pdo_mysql',
 );
 
