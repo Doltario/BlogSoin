@@ -12,6 +12,8 @@
       protected $content;
     /** @Column(type="date", length=50, nullable=true) **/
       protected $date;
+    /** @Column(type="text", length=500, nullable=true) **/
+      protected $sumup;
       /**
           * @OneToOne(targetEntity="User", mappedBy="article")
           * @JoinColumn(name="user_id", referencedColumnName="id")
@@ -151,5 +153,29 @@
     public function getComment()
     {
         return $this->comment;
+    }
+
+    /**
+     * Set sumup
+     *
+     * @param string $sumup
+     *
+     * @return Article
+     */
+    public function setSumup($sumup)
+    {
+        $this->sumup = $sumup;
+
+        return $this;
+    }
+
+    /**
+     * Get sumup
+     *
+     * @return string
+     */
+    public function getSumup()
+    {
+        return $this->sumup;
     }
 }

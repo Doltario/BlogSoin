@@ -37,9 +37,9 @@ if (isset($_POST['add'])) {
           $_SESSION['user_id'] = $user->getId();
           $_SESSION['user_login'] = $user->getName();
 
-          header("Location: ../pages/home.php?user_id=".$_SESSION['user_id']);
+          header("Location: ../pages/home.php");
 
-        } else {
+        }
           //Retour sur index avec msg d'erreur : mail deja utilisé
           header('Location:../index.php?err=email');
         }
