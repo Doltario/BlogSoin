@@ -21,7 +21,7 @@
 
           <label for="pwd">Password</label>
           <input type="password" name="pwd">
-          <input type="submit" value="Connect" name="connect"/>
+          <input type="submit" value="Connect" class="btn connect" name="connect"/>
         </form>
       </header>
 
@@ -44,7 +44,7 @@
             <label for="pwd"><p>Password confirm</p></label>
             <input type="password" name="pwd_confirm"><br>
             <br>
-            <input type="submit" value="Go ! " name="add"/>
+            <input type="submit" class="btn color-1 bg-grey" value="Go ! " name="add"/>
           </form>
         </div>
       </div>

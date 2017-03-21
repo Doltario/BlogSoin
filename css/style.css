@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 /*
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
@@ -9,7 +10,7 @@ _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 *{
   box-sizing: border-box;
-  font-family: 'lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 html, body {
@@ -44,6 +45,9 @@ _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
   background-color: #fff;
 }
 
+.bg-grey {
+  background-color: grey;
+}
 /*
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
@@ -91,6 +95,25 @@ header{
           justify-content: space-between;
 }
 
+header h1 {
+  font-family: 'Lato', sans-serif;
+}
+
+header input{
+  border: none;
+  outline: none;
+  height: 1.5rem;
+}
+
+header input.connect{
+  font-weight: 800;
+}
+header input.connect:hover{
+  cursor: pointer;
+}
+
+/* homepage */
+
 
 .homepage .container{
   width: 35vw;
@@ -106,7 +129,7 @@ header{
 }
 
 .homepage .content{
-  background-color: rgba(69, 223, 188, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   width: 100%;
   min-height: 40%;
   padding : 1em;
@@ -122,6 +145,10 @@ header{
       justify-content: space-around;
 }
 
+.content h3{
+  margin-bottom: 10px;
+}
+
 form p{
   margin: 0;
   text-align: left;
@@ -133,4 +160,16 @@ form p{
   padding: 10px;
   border : none;
   outline : none;
+  margin-bottom: 5px;
+}
+
+input.btn{
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+input.btn:hover{
+  background-color: rgb(159, 57, 49);
+  color: #fff;
+  cursor: pointer;
 }
