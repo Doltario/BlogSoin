@@ -12,18 +12,8 @@
       protected $password;
     /** @Column(type="string", length=160, nullable=true)**/
       protected $mail;
-    /** @Column(type="boolean") **/
+    /** @Column(type="boolean", nullable=true) **/
       protected $is_admin;
-    /**
-        * @OneToOne(targetEntity="Article", inversedBy="user")
-        * @JoinColumn(name="article_id", referencedColumnName="id")
-    **/
-        protected $article;
-    /**
-        * @OneToOne(targetEntity="Comment", inversedBy="user")
-        * @JoinColumn(name="comment_id", referencedColumnName="id")
-    **/
-        protected $comment;
 
 
     /**

@@ -15,7 +15,7 @@
     <main class="homepage image1">
       <header>
         <h1>B&K</h1>
-        <form class="" action="" method="post">
+        <form class="" action="controller/connect.php" method="post">
           <label for="mail">Email</label>
           <input type="text" name="mail">
 
@@ -31,7 +31,7 @@
             <h2>Pas encore membre ?</h2>
             <h3>Inscrivez vous des maintenant !</h3>
           </div>
-          <form class="" action="" method="post">
+          <form class="" action="controller/create_user.php" method="post">
             <label for=""><p>Email</p></label>
             <input type="text" name="mail"><br>
 
