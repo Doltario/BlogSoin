@@ -16,7 +16,17 @@ if (isset($_POST['connect'])) {
     $usersMail = $usersRepository->findOneBy(array('mail'=>$mail));
 
     if (!is_null($usersMail)) {
-      $usersMail->getId();
+
+      $pwd = hash('sha512', $pwd);
+
+      if($pwd == $usersMail->getPassword()) {
+        $_SESSION['user_id'] = $usersMail->getId();
+        $_SESSION['user_login'] = $usersMail->getName();
+
+        header("Location: ../pages/home.php");
+      } else {
+        //redirection vers index : mot de passe ne correspondent pas
+      }
     } else {
       //redirection vers index : compte n'existe pas
     }
