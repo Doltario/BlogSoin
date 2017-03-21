@@ -173,3 +173,12 @@ input.btn:hover{
   color: #fff;
   cursor: pointer;
 }
+
+.error {
+  color : red;
+  margin-bottom: 25px;
+}
+
+.error p {
+  text-align: center;
+}

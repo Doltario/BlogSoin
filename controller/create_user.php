@@ -41,16 +41,21 @@ if (isset($_POST['add'])) {
 
         } else {
           //Retour sur index avec msg d'erreur : mail deja utilisé
+          header('Location:../index.php?err=email');
         }
       } else {
         //Retour sur index avec msg d'erreur : nom deja utilisé
+        header('Location:../index.php?err=name');
       }
     } else {
       //Retour sur index avec msg d'erreur : les mdp doivent correspondre
+      header('Location:../index.php?err=password');
     }
   } else {
     // Retour sur index avec msg d'erreur : remplir tout les champs
+    header('Location:../index.php?err=fields');
   }
 } else {
   // Retour sur index
+  header('Location:../index.php');
 }

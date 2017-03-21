@@ -44,6 +44,38 @@
             <label for="pwd"><p>Password confirm</p></label>
             <input type="password" name="pwd_confirm"><br>
             <br>
+            <?php
+              if(isset($_GET['err']) && !empty($_GET['err']) ){
+
+
+                $error = $_GET['err'];
+
+                switch ($error) {
+                  case 'email':
+                    echo "<div class='error'>
+                      <p><i class='fa fa-exclamation-triangle' aria-hidden='true'></i>Adresse mail déjà utilisée<i class='fa fa-exclamation-triangle' aria-hidden='true'></i></p>
+                    </div>";
+                    break;
+                  case 'name':
+                    echo "<div class='error'>
+                      <p><i class='fa fa-exclamation-triangle' aria-hidden='true'></i>Nom d'utilisateur déjà utilisé<i class='fa fa-exclamation-triangle' aria-hidden='true'></i></p>
+                    </div>";
+                    break;
+                  case 'password':
+                    echo "<div class='error'>
+                      <p><i class='fa fa-exclamation-triangle' aria-hidden='true'></i>Les mots de passe doivent correspondre<i class='fa fa-exclamation-triangle' aria-hidden='true'></i></p>
+                    </div>";
+                    break;
+                  case 'fields':
+                    echo "<div class='error'>
+                      <p><i class='fa fa-exclamation-triangle' aria-hidden='true'></i>Veuillez remplir tous les champs<i class='fa fa-exclamation-triangle' aria-hidden='true'></i></p>
+                    </div>";
+                    break;
+                }
+              }
+            ?>
+
+
             <input type="submit" class="btn color-1 bg-grey" value="Go ! " name="add"/>
           </form>
         </div>
