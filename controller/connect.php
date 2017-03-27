@@ -26,15 +26,19 @@ if (isset($_POST['connect'])) {
         header("Location: ../pages/home.php");
       } else {
         //redirection vers index : mot de passe ne correspondent pas
+        header('Location:../index.php?err=connect-password');
       }
     } else {
       //redirection vers index : compte n'existe pas
+      header('Location:../index.php?err=account');
     }
 
   } else {
     //redirection vers index avec erreur : merci de remplir tout les champs
+    header('Location:../index.php?err=connect-fields');
   }
 } else {
   //redirection vers index
+  header('Location:../index.php');
 }
  ?>

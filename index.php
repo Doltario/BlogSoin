@@ -16,6 +16,32 @@
       <header>
         <h1>B&K</h1>
         <form class="" action="controller/connect.php" method="post">
+          <?php
+            if(isset($_GET['err']) && !empty($_GET['err']) ){
+
+
+              $error = $_GET['err'];
+
+              switch ($error) {
+                case 'connect-password':
+                  echo "<div class='error'>
+                    <p><i class='fa fa-exclamation-triangle' aria-hidden='true'></i>Mot de passe erroné<i class='fa fa-exclamation-triangle' aria-hidden='true'></i></p>
+                  </div>";
+                  break;
+                case 'account':
+                  echo "<div class='error'>
+                    <p><i class='fa fa-exclamation-triangle' aria-hidden='true'></i>Compte introuvable<i class='fa fa-exclamation-triangle' aria-hidden='true'></i></p>
+                  </div>";
+                  break;
+                case 'connect-fields':
+                  echo "<div class='error'>
+                    <p><i class='fa fa-exclamation-triangle' aria-hidden='true'></i>Veuillez remplir tous les champs<i class='fa fa-exclamation-triangle' aria-hidden='true'></i></p>
+                  </div>";
+                  break;
+
+              }
+            }
+          ?>
           <label for="mail">Email</label>
           <input type="text" name="mail">
 
@@ -32,6 +58,7 @@
             <h3>Inscrivez vous des maintenant !</h3>
           </div>
           <form class="" action="controller/create_user.php" method="post">
+
             <label for=""><p>Email</p></label>
             <input type="text" name="mail"><br>
 

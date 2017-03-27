@@ -112,6 +112,30 @@ header input.connect:hover{
   cursor: pointer;
 }
 
+header form{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header form input{
+  margin: 0 5px;
+}
+header form label{
+  margin: 0 5px;
+}
+
+header .error{
+  display: inline-block;
+}
+
+header .error p {
+  display: inline-block;
+}
+
 /* homepage */
 
 
